@@ -26,8 +26,8 @@ public class Client {
 
     @NotBlank
     @Pattern(regexp = "\\(?\\d{2}\\)?\\d?\\d{4}-?\\d{4}")
-    @Column(name = "telefone")
-    private String telefone;
+    @Column(name = "telephone")
+    private String telephone;
 
     @Override
     public boolean equals(Object o) {
