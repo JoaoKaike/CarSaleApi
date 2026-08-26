@@ -53,12 +53,12 @@ public class Client {
         this.name = name;
     }
 
-    public String getTelefone() {
-        return telefone;
+    public String getTelephone() {
+        return telephone;
     }
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
 
     
