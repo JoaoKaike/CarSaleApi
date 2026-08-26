@@ -1,6 +1,7 @@
 package com.CarSale.model;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
@@ -45,6 +46,56 @@ public class CarPurchase {
     @Enumerated(EnumType.STRING)
     @Column(name = "status")
     private SaleStatus saleStatus;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CarPurchase carPurchase = (CarPurchase) o;
+        return Objects.equals(id, carPurchase.id);
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
+
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+        this.car = car;
+    }
+
+    public SaleStatus getSaleStatus() {
+        return saleStatus;
+    }
+
+    public void setSaleStatus(SaleStatus saleStatus) {
+        this.saleStatus = saleStatus;
+    }
+
     
+
 
 }
