@@ -28,4 +28,8 @@ public class ClientService {
         return clientRepository.findById(id).orElse(null);
     }
 
+    public Client updateClient(Client client) {
+        return clientRepository.saveAndFlush(client);
+    }
+
 }

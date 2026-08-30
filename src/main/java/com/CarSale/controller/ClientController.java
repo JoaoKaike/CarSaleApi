@@ -44,7 +44,7 @@ public class ClientController {
 
     @PutMapping
     public ResponseEntity<Void> updateClient(@RequestBody Client client) {
-        clientService.saveClient(client);
+        clientService.updateClient(client);
         return ResponseEntity.ok().build();
     }
 
